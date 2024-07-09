@@ -1,0 +1,72 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="your.package.name">
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+        <activity android:name=".YourActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name=".CallRecordingService" />
+
+    </application>
+
+</manifest>
+
+
+        <!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--          package="com.yourdomain.yourapp">-->
+
+<!--    &lt;!&ndash; Permissions &ndash;&gt;-->
+<!--    <uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+<!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />-->
+<!--    &lt;!&ndash; If targeting SDK 23 or higher, consider runtime permission requests &ndash;&gt;-->
+
+<!--    &lt;!&ndash; Service for handling call recording in the background &ndash;&gt;-->
+<!--    <service android:name=".CallRecordingService" />-->
+
+<!--    &lt;!&ndash; Broadcast Receiver for listening to phone state changes &ndash;&gt;-->
+<!--    <receiver android:name=".CallStateReceiver">-->
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.PHONE_STATE" />-->
+<!--        </intent-filter>-->
+<!--    </receiver>-->
+
+<!--    <application-->
+<!--            android:allowBackup="true"-->
+<!--            android:icon="@mipmap/ic_launcher"-->
+<!--            android:label="@string/app_name"-->
+<!--            android:roundIcon="@mipmap/ic_launcher_round"-->
+<!--            android:supportsRtl="true"-->
+<!--            android:theme="@style/AppTheme">-->
+
+<!--        &lt;!&ndash; Main Activity &ndash;&gt;-->
+<!--        <activity android:name=".MainActivity">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
+<!--        &lt;!&ndash; Other activities can be declared here &ndash;&gt;-->
+
+<!--        &lt;!&ndash; Testing Tools &ndash;&gt;-->
+<!--        &lt;!&ndash; Include tools like Espresso for UI testing or other libraries as needed &ndash;&gt;-->
+
+<!--    </application>-->
+<!--</manifest>-->
